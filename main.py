@@ -15,3 +15,10 @@ print(grupa)
 grupa.plot()
 plt.show()
 
+#Stwórz wykres słupkowy, który wyświetli liczbę urodzonych chłopców i dziewczynek z całego zbioru.
+
+grupa2 = df.groupby(['Plec']).agg({'Liczba':['sum']})
+print(grupa2)
+
+grupa2.plot(kind='bar', xlabel='Plec', ylabel='Liczba (mln)', rot=0, legend=True, title='Liczba urodzeń z podziałem na płeć')
+plt.show()
